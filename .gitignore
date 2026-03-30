@@ -1,0 +1,11 @@
+node_modules/
+dist/
+
+.next/
+*.tsbuildinfo
+.env*
+deeplink.config.ts
+
+.ai
+.agents
+CLAUDE.md

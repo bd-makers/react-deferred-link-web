@@ -1,27 +1,51 @@
 {
   "name": "react-deferred-link-web",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Deferred deep link landing page for React/Next.js — iOS pasteboard & Android install referrer",
   "license": "MIT",
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
-    "./react": "./src/react/index.ts",
-    "./nextjs": "./src/nextjs/index.ts"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.js",
+      "types": "./dist/react.d.ts"
+    },
+    "./nextjs": {
+      "import": "./dist/nextjs.js",
+      "types": "./dist/nextjs.d.ts"
+    }
   },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:lib": "tsup",
+    "prepublishOnly": "npm run build:lib",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
-  "dependencies": {
-    "next": "latest",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1"
+  "peerDependencies": {
+    "next": ">=14",
+    "react": ">=18"
   },
+  "peerDependenciesMeta": {
+    "next": {
+      "optional": true
+    }
+  },
+  "dependencies": {},
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
@@ -29,7 +53,12 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.3",
+    "next": "latest",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsup": "^8.5.1",
+    "typescript": "^5",
+    "vitest": "^4.1.2"
   }
 }

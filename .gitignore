@@ -4,6 +4,7 @@ dist/
 .next/
 *.tsbuildinfo
 .env*
+.npmrc
 deeplink.config.ts
 
 .ai

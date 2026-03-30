@@ -1,5 +1,5 @@
 {
-  "name": "react-deferred-link-web",
+  "name": "@bdmakers/react-deferred-link-web",
   "version": "1.0.0",
   "description": "Deferred deep link landing page for React/Next.js — iOS pasteboard & Android install referrer",
   "license": "MIT",

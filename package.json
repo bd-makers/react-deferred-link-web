@@ -1,8 +1,22 @@
 {
   "name": "@bdmakers/react-deferred-link-web",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Deferred deep link landing page for React/Next.js — iOS pasteboard & Android install referrer",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bd-makers/react-deferred-link-web"
+  },
+  "homepage": "https://github.com/bd-makers/react-deferred-link-web#readme",
+  "keywords": [
+    "deep-link",
+    "deferred-deep-link",
+    "react",
+    "nextjs",
+    "firebase-dynamic-links",
+    "pasteboard",
+    "install-referrer"
+  ],
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
